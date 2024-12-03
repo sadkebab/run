@@ -1,22 +1,23 @@
 {
   "name": "@sadkebab/run",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Alberto Harka",
   "license": "MIT",
   "description": "Declarative entrypoint for simple node scripts",
   "type": "module",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "repository": "https://github.com/sadkebab/run",
   "scripts": {
     "lint": "tsc --noEmit",
     "format": "prettier --write .",
-    "build": "tsup index.ts --format cjs,esm --dts --outDir dist",
-    "publish": "echo done"
+    "build": "tsup index.ts --format cjs,esm --dts --outDir dist"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",
     "@types/bun": "latest",
+    "prettier": "^3.4.1",
     "tsup": "^8.3.5"
   },
   "peerDependencies": {
