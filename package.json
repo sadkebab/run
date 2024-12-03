@@ -1,9 +1,23 @@
 {
-  "name": "funfn",
-  "module": "index.ts",
+  "name": "runfn",
+  "version": "0.0.1",
+  "author": "Alberto Harka",
+  "license": "MIT",
+  "description": "Declarative entrypoint for simple node scripts",
   "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "format": "prettier --write .",
+    "build": "tsup index.ts --format cjs,esm --dts --outDir dist",
+    "publish": "echo done"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@changesets/cli": "^2.27.10",
+    "@types/bun": "latest",
+    "tsup": "^8.3.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
