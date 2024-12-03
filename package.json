@@ -1,6 +1,6 @@
 {
   "name": "@sadkebab/run",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Alberto Harka",
   "license": "MIT",
   "description": "Declarative entrypoint for simple node scripts",
