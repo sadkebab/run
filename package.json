@@ -8,7 +8,10 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
-  "repository": "https://github.com/sadkebab/run",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sadkebab/run"
+  },
   "scripts": {
     "lint": "tsc --noEmit",
     "format": "prettier --write .",
