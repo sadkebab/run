@@ -1,7 +1,7 @@
 # Run
 
 A minimal declarative entrypoint for simple node/deno/bun scripts.
-Enjoy the ergonomic hooks for lifecycle handlers and say goodbye forever to top-level await errors.
+Enjoy the ergonomic hooks for lifecycle handlers and say goodbye to top-level await errors.
 
 ## Supports
 
@@ -9,7 +9,6 @@ Enjoy the ergonomic hooks for lifecycle handlers and say goodbye forever to top-
 - TypeScript
 - ESM
 - CJS
-- Modules
 - Node.js
 - Bun
 
@@ -54,7 +53,7 @@ const env = memParse(
     DB_PASSWORD: z.string(),
     DB_DATABASE: z.string(),
   }),
-  process.env
+  process.env,
 );
 
 run(
@@ -74,8 +73,8 @@ run(
               "<h1>Please stop using WordPress. I am tired of people asking me to fix their WordPress website</h2>",
           },
           where: [{ field: "ID", op: "=", value: post.ID }],
-        })
-      )
+        }),
+      ),
     );
 
     console.log(`[Updated] ${updated.length} pages`);
@@ -106,7 +105,7 @@ run(
       console.error(error);
       process.exit(1);
     },
-  }
+  },
 );
 ```
 
